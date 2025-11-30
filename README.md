@@ -177,3 +177,62 @@ Load:
 
 from tensorflow.keras.models import load_model
 model = load_model("cat_dog_cnn_model.h5")
+
+
+Project Goal:
+
+Binary image classification: Cats (0) vs Dogs (1) using CIFAR-10 dataset.
+
+Model Architecture:
+
+3 Convolution + MaxPooling blocks.
+
+Conv layers extract spatial features; pooling reduces dimensions.
+
+Flatten → Dense → Sigmoid for classification.
+
+Activation Functions:
+
+ReLU for convolution layers.
+
+Sigmoid for binary output.
+
+Data Preprocessing:
+
+Normalized pixel values (0–1).
+
+Extracted only cat and dog images from CIFAR-10.
+
+Optional: Image augmentation via ImageDataGenerator.
+
+Training Details:
+
+Epochs: 10, Batch size: 64
+
+Validation split: 20%
+
+Achieved ~85–90% accuracy after 5 epochs.
+
+Overfitting Control:
+
+MaxPooling layers, validation split, optional augmentation.
+
+Visualization:
+
+Accuracy & loss plots during training.
+
+Random test image predictions with visualization.
+
+Model Saving:
+
+model.save("cat_dog_cnn_model.h5")
+
+Ready for deployment or GitHub sharing.
+
+Key Concepts Demonstrated:
+
+Convolution layers, Pooling, Activation functions
+
+Binary classification, Training/validation split
+
+Image preprocessing, Feature extraction
